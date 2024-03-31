@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Form</title>
     <style>
     </style>
 </head>
 <body>
-    <fieldset>
-        <legend>Calculator</legend>
-    </fieldset>
+   <fieldset>
+    <legend>form</legend>
+    <lable for="name"> Name:</lable>
+    <input type="text" id="name" name="name" required></input><br><br>
+
+    <lable for="password"> Password:</lable>
+    <input type="text" id="password" name="password" placeholder="ekta#@"></input><br><br>
+    
+    <label for="phone">Phone No.:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"></input><br><br>
+    
+    <label for="gender" >Gender</label><br>
+    <label for="female" >female</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="male" >male</label>
+    <input type="radio" id="male" name="gender" value="male"><br><br>
+    
+    <label for="county">County:</label>
+    <select id="county" name="county">
+    <option value=""> Select county</option>
+    <option value="india"> india</option>
+    <option value="uk"> uk</option>
+    <option value="napel"> napel</option>
+    </select>
+</fieldset>
 </body>
 </html>
