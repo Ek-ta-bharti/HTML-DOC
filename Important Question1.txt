@@ -1,0 +1,32 @@
+
+
+41. What is the purpose of the `<form>` tag in HTML, and how do you handle form submission?
+42. Describe the difference between absolute and relative positioning in CSS, and how they affect HTML elements.
+43. How do you create ordered and unordered lists in HTML, and what are the differences between them?
+44. Explain the purpose of the `<label>` tag in HTML forms and its relationship with form inputs.
+45. What are HTML entities, and when should you use them in your markup?
+46. Discuss the role of the `<script>` tag in HTML documents for embedding JavaScript code.
+47. How do you create a dropdown menu in HTML and CSS?
+48. Describe the purpose of the `<fieldset>` and `<legend>` tags in HTML forms and provide examples of their usage.
+49. What is the purpose of the `placeholder` attribute in HTML form inputs?
+50. Explain the concept of HTML5 Web Storage and its difference from cookies.
+51. How do you embed SVG (Scalable Vector Graphics) images in HTML documents?
+52. Discuss the significance of the `<video>` and `<audio>` tags in HTML5 for embedding media content.
+53. What is the purpose of the `required` attribute in HTML form elements?
+54. How do you create a responsive design layout using HTML and CSS?
+55. Explain the purpose and usage of the `<figcaption>` tag in HTML5 for figure elements.
+56. Describe the role of the `<progress>` tag in HTML5 and provide examples of its usage.
+57. What are HTML character encoding and character sets? How do they impact web development?
+58. Discuss the purpose of the `<blockquote>` and `<cite>` tags in HTML for quoting and citing content.
+59. How do you create an image map in HTML, and what are its practical applications?
+60. Explain the purpose and usage of the `<datalist>` tag in HTML5 for providing predefined options in form inputs.
+61. What is the purpose of the `defer` and `async` attributes in the `<script>` tag, and how do they affect script loading in HTML documents?
+62. Describe the role of the `<details>` and `<summary>` tags in HTML5 for creating collapsible content sections.
+63. How do you embed a YouTube video in an HTML document?
+64. Discuss the concept of HTML validation and the tools available for validating HTML code.
+65. What is the purpose of the `download` attribute in HTML anchor tags, and how does it work?
+66. How do you create responsive images in HTML to adapt to different screen sizes?
+67. Explain the purpose and usage of the `<output>` tag in HTML5 for displaying calculation results.
+68. Describe the purpose of the `<iframe>` tag in HTML and provide examples of its usage.
+69. What are HTML microformats, and how do they enhance the semantic meaning of web content?
+70. Discuss the significance of the `<picture>` element in HTML5 for responsive image loading.
