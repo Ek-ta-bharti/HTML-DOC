@@ -1,0 +1,40 @@
+1. What is the purpose of the `DOCTYPE` declaration in HTML?
+2. Explain the difference between HTML and XHTML.
+3. How does HTML5 differ from its predecessors?
+4. Describe the structure of an HTML document.
+5. What are semantic elements in HTML, and why are they important?
+6. Explain the significance of the `<meta>` tag in HTML.
+7. What is the role of the `<head>` and `<body>` tags in an HTML document?
+8. How do you create hyperlinks in HTML?
+9. What is the purpose of the `alt` attribute in the `<img>` tag?
+10. Explain the concept of accessibility in web development and how it relates to HTML.
+11. What are HTML forms, and how do they function?
+12. Discuss the difference between `GET` and `POST` methods in HTML forms.
+13. How can you embed multimedia content such as videos and audio in HTML?
+14. What is the purpose of the `<table>` tag, and how do you structure tables in HTML?
+15. Describe the difference between `<div>` and `<span>` tags in HTML.
+16. How do you implement CSS styles in HTML documents?
+17. Explain the concept of responsive web design and how it's achieved using HTML and CSS.
+18. Discuss the significance of the `<canvas>` tag in HTML5.
+19. What are the different types of lists available in HTML, and how do you create them?
+20. Describe the purpose of the `<iframe>` tag in HTML and provide examples of its usage.
+21. How do you add comments in HTML?
+22. Explain the importance of validation in HTML, and how it's accomplished.
+23. What is the purpose of the `hreflang` attribute in HTML?
+24. Discuss the role of HTML in search engine optimization (SEO).
+25. How do you integrate JavaScript into HTML documents, and what are the benefits?
+26. Describe the purpose and usage of the `<header>`, `<footer>`, `<nav>`, and `<section>` tags in HTML5.
+27. Explain the difference between inline, block, and inline-block elements in HTML.
+28. What are HTML entities, and when are they used?
+29. Describe the role of the `<details>` and `<summary>` tags in HTML5.
+30. How do you implement multimedia fallbacks in HTML for browsers that do not support certain features?
+31. Discuss the importance of semantic HTML5 markup for search engine optimization.
+32. Explain the purpose of the `<time>` tag in HTML5 and provide examples of its usage.
+33. What are data attributes in HTML, and how do you use them?
+34. Describe the purpose and usage of the `<article>` and `<aside>` tags in HTML5.
+35. How do you handle character encoding in HTML documents?
+36. Explain the significance of the `role` attribute in HTML for accessibility purposes.
+37. What are the benefits of using semantic HTML elements over generic ones?
+38. Discuss the difference between the `<strong>` and `<b>` tags, and when to use each.
+39. How do you embed external content, such as social media feeds, in HTML documents?
+40. Describe the purpose of the `<ruby>` and `<rt>` tags in HTML for displaying ruby annotations.
