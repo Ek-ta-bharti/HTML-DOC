@@ -1,56 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Joint Pain Pre-Lander</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-                li {
-                    list-style-type: none;
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f8fafc, #e3e4e8);
+            color: #333;
+        }
+        
+        header {
+            background-color: #f0f0f0;
+            color: #848484;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            text-align: center;
+            padding: 1px;
+            font-size: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            overflow: hidden;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            color: #007bff;
+            text-align: center;
+        }
+        
+        h2 {
+            margin-top: 40px;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #007bff;
+            margin: 10px auto 0;
+            border-radius: 4px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            color: #007bff;
+            font-weight: bold;
+        }
+        
+        .intro,
+        .history,
+        .types,
+        .importance,
+        .research,
+        .future {
+            margin-bottom: 50px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .intro {
+            background-image: url('https://source.unsplash.com/1600x900/?joint-pain');
+            background-size: cover;
+            background-position: center;
+            color: #050202;
+            padding: 40px 20px;
+        }
+        
+        .types {
+            background-image: url('https://source.unsplash.com/1600x900/?pain-relief');
+            background-size: cover;
+            background-position: center;
+            color: #050202;
+            padding: 20px;
+            /* Added padding for better spacing */
+        }
+        
+        .intro h2,
+        .intro p,
+        .types h2,
+        .types p,
+        .types h3 {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        .highlight-bg {
+            background: linear-gradient(to right, #ffdd57, #ff7e5f);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #0056b3;
+        }
+        
+        .fade-in {
+            animation: fadeIn 2s ease-in forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .intro,
+            .history,
+            .types,
+            .importance,
+            .research,
+            .future {
+                padding: 10px;
+            }
+            .intro h2,
+            .intro p,
+            .types h2,
+            .types p,
+            .types h3 {
+                font-size: 1em;
+            }
+        }
+        
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        footer p {
+            margin: 10px 0;
+            text-align: center;
+        }
+        
+        footer hr {
+            margin: 10px 0;
+            border: 0;
+            border-top: 1px solid #555;
+        }
+        
+        footer div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        footer div a {
+            color: white;
+            margin: 5px;
+            text-decoration: none;
+        }
+        
+        footer div a:hover {
+            text-decoration: underline;
+        }
+        
+        .video-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .video-container iframe {
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .types h2 {
+            margin-bottom: 20px;
+            /* Added margin to separate from list items */
+        }
+        
+        .types h3 {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-left: 5px solid #007bff;
+            font-weight: bold;
+            text-align: left;
+            /* Aligns the headings to the left */
+        }
+        
+        .types p {
+            margin-left: 0;
+            padding: 0 20px;
+            /* Added padding for better text alignment */
+        }
+        
+        .call-to-action {
+            text-align: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        
+        .cta-button:active {
+            background: #003d80;
+            transform: scale(0.95);
         }
     </style>
 </head>
+
 <body>
-    <div>
-        <ol>
-            <li>hgah</li>
-            <li>gxjsxx</li>
-        </ol>
-        <ul>
-            <li>fghj</li>
-            <li>rghn</li>
-        </ul>
+    <header>
+        <h1>ADVERTORIAL</h1>
+    </header>
+
+    <div class="container">
+        <section class="intro fade-in">
+            <h2>Introduction</h2>
+            <p>Joint pain is a common issue that affects millions of people around the world. It can result from various factors, including aging, injury, and underlying medical conditions. Joint pain can significantly impact a person's quality of life,
+                making everyday activities challenging. Understanding the causes and treatments for joint pain is essential for managing and alleviating discomfort.</p>
+            <p>Joint pain can arise from conditions such as arthritis, which includes osteoarthritis and rheumatoid arthritis. Osteoarthritis is a degenerative joint disease characterized by the breakdown of cartilage, while rheumatoid arthritis is an autoimmune
+                disorder that causes inflammation in the joints. Other factors such as sports injuries, overuse, and joint infections can also contribute to joint pain.</p>
+            <p>Managing joint pain often involves a combination of lifestyle changes, medical treatments, and physical therapy. Maintaining a healthy weight, staying active, and engaging in exercises that strengthen the muscles around the joints can help
+                reduce pain and improve mobility. In some cases, medications or surgical interventions may be necessary to address underlying conditions and provide relief.</p>
+            <p>Advancements in medical research continue to offer new insights into joint pain management and treatment options. Innovative therapies, such as regenerative medicine and biologics, are being explored to provide more effective solutions for
+                joint pain and related conditions. Additionally, personalized approaches to treatment, including tailored exercise programs and targeted medications, are helping individuals manage their symptoms more effectively.</p>
+        </section>
+
+        <section class="video-container">
+            <h2>Watch Our Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Co1c_DD3Ya8?si=VaY_jzzXYKppvs6R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section class="history fade-in">
+            <h2>History of Joint Pain Treatment</h2>
+            <p>Throughout history, various methods have been used to treat joint pain. Ancient civilizations utilized natural remedies, such as herbs and physical therapies, to manage discomfort. Traditional practices, including acupuncture and massage,
+                have been used for centuries to alleviate joint pain and improve mobility.</p>
+            <p>In the modern era, advancements in medicine have led to more effective treatments for joint pain. The development of nonsteroidal anti-inflammatory drugs (NSAIDs) and disease-modifying antirheumatic drugs (DMARDs) has significantly improved
+                the management of conditions like arthritis. Surgical interventions, such as joint replacement surgery, have also become more refined, offering relief to individuals with severe joint damage.</p>
+            <p>Research continues to explore new approaches to joint pain treatment, including biologics and regenerative therapies. These innovative treatments aim to address the underlying causes of joint pain and provide more targeted and effective solutions
+                for patients.</p>
+        </section>
+
+        <section class="types fade-in">
+            <h2>Types of Joint Pain</h2>
+            <hr>
+            <h3>Osteoarthritis</h3>
+            <p>Osteoarthritis is a degenerative joint disease characterized by the breakdown of cartilage. It often affects weight-bearing joints, such as the knees and hips, leading to pain, stiffness, and decreased mobility.</p>
+            <h3>Rheumatoid Arthritis</h3>
+            <p>Rheumatoid arthritis is an autoimmune disorder that causes inflammation in the joints. It can lead to joint damage and deformities if left untreated. Early diagnosis and treatment are crucial for managing this condition.</p>
+            <h3>Gout</h3>
+            <p>Gout is a type of arthritis caused by the buildup of uric acid crystals in the joints. It often presents with sudden and severe pain, swelling, and redness. Dietary changes and medications can help manage gout symptoms.</p>
+            <h3>Psoriatic Arthritis</h3>
+            <p>Psoriatic arthritis is a form of arthritis associated with psoriasis, a skin condition. It can affect various joints and may lead to joint pain, stiffness, and swelling. Treatment often involves a combination of medications and lifestyle modifications.
+            </p>
+        </section>
+
+        <section class="importance fade-in">
+            <h2>The Importance of Addressing Joint Pain</h2>
+            <p>Addressing joint pain is essential for maintaining a good quality of life. Chronic joint pain can limit a person's ability to perform daily activities, affecting their overall well-being and independence. Effective management of joint pain
+                can improve mobility, reduce discomfort, and enhance daily functioning.</p>
+            <p>Proactively addressing joint pain can also prevent further joint damage and complications. Early intervention and treatment can help manage symptoms and slow the progression of underlying conditions. Additionally, adopting a healthy lifestyle
+                and engaging in regular physical activity can support joint health and prevent future issues.</p>
+        </section>
+
+        <section class="research fade-in">
+            <h2>Research and Future Directions</h2>
+            <p>Ongoing research in the field of joint pain treatment aims to discover new and more effective therapies. Studies are exploring the use of stem cells, gene therapy, and novel medications to improve joint health and provide relief from pain.</p>
+            <p>Future advancements in joint pain treatment may include personalized medicine approaches, where treatments are tailored to an individual's specific needs and genetic profile. These innovations hold the potential to revolutionize the management
+                of joint pain and related conditions.</p>
+        </section>
+
+        <section class="future fade-in">
+            <h2>Future of Joint Pain Treatment</h2>
+            <p>The future of joint pain treatment looks promising, with ongoing advancements in medical research and technology. Emerging therapies, such as tissue engineering and regenerative medicine, offer hope for more effective and targeted treatments.</p>
+            <p>Continued research and innovation in joint pain management will likely lead to new breakthroughs, improving the quality of life for individuals affected by joint pain and offering more effective solutions for managing and alleviating discomfort.</p>
+        </section>
+
+        <section class="call-to-action">
+            <h2>Join a Free Class Today!</h2>
+            <p>Discover how yoga can help manage and alleviate joint pain through our free classes. Our expert instructors will guide you through exercises designed to improve flexibility, strength, and overall joint health. Experience the benefits of yoga
+                and start your journey towards a pain-free life.</p>
+            <p class="highlight">Sign up for a free class and take the first step towards better joint health!</p>
+            <a href="connect.html" class="cta-button">Sign Up Now</a>
+        </section>
+
     </div>
+
+    <footer>
+        <div>
+            <p>© 2024 Joint Pain Relief. All Rights Reserved.</p>
+            <hr>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
-
-<!-- 
-`<ul>` and `<ol>` are both HTML elements used for creating lists, but they have different purposes and render differently on the web page. -->
-
-    <!-- 1. **Unordered List (`<ul>`)**:
-       - Represents a list of items in no particular order.
-       - Each item in the list is typically preceded by a bullet point.
-       - Commonly used for navigation menus, lists of items, or any list where the order of items is not significant.
-       - Example:
-         ```html
-         <ul>
-             <li>Item 1</li>
-             <li>Item 2</li>
-             <li>Item 3</li>
-         </ul>
-         ```
-    
-    2. **Ordered List (`<ol>`)**:
-       - Represents a list of items in a specific order.
-       - Each item in the list is preceded by a number or another ordered marker (like letters or Roman numerals).
-       - Used when the sequence of items is important, such as steps in a process, rankings, or any ordered set of items.
-       - Example:
-         ```html
-         <ol>
-             <li>Step 1</li>
-             <li>Step 2</li>
-             <li>Step 3</li>
-         </ol>
-         ```
-    
-    In summary, `<ul>` is for unordered lists (items with no specific order), and `<ol>` is for ordered lists (items with a defined sequence). The choice between them depends on the content and the desired presentation of the list on the webpage. -->

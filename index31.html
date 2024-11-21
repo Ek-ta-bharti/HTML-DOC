@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joint Pain Relief</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e0e0e0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+        }
+        
+        header {
+            background: #009688;
+            color: #fff;
+            width: 100%;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        
+        header h2 {
+            color: #848484;
+            background-color: #ffffff;
+            font-size: 6px;
+            text-align: center;
+            width: 1300px;
+            padding: 3px;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        
+        section {
+            margin: 120px 20px 20px 10px;
+            text-align: center;
+            width: calc(100% - 40px);
+            /* Account for side margins */
+            max-width: 1200px;
+            /* Ensure content width is constrained */
+        }
+        
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        section img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            flex: 1;
+        }
+        
+        .benefit h3 {
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+        
+        .benefit p {
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .container {
+            width: calc(100% - 40px);
+            /* Account for side margins */
+            max-width: 1200px;
+            /* Ensure content width is constrained */
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        .accordion {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+        
+        .accordion-item-header {
+            padding: 15px;
+            cursor: pointer;
+            font-size: 1.2em;
+            background: #f7f7f7;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .accordion-item-header:hover {
+            background: #e0e0e0;
+            color: #009688;
+        }
+        
+        .accordion-item-content {
+            padding: 15px;
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+        }
+        
+        .accordion-item-content.open {
+            display: block;
+            max-height: 500px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            background: #009688;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #00796b;
+        }
+        
+        .iframe-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        
+        .iframe-container iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background-color: #ffffff;
+            color: #8f8383;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        footer a {
+            color: #009688;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        footer hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>ADVERTORIAL</h2>
+        <h1>Joint Pain Relief</h1>
+    </header>
+    <section>
+        <div class="content-wrapper">
+            <img src="Image/0.jpg" alt="Meditating Yoga Woman">
+            <div class="benefit">
+                <h3>Joint Pain</h3>
+                <p>
+                    Millions of British individuals endure pain in their knees, shoulders, lower back, hips, elbows, fingers, and other areas. According to Dr. Raphael Perez, the underlying issue might be something he calls “Cartilage Deterioration Syndrome.” Cartilage,
+                    the connective tissue between your joints, prevents bones from grinding against each other, thus avoiding pain. <br>Acting as a shock absorber, cartilage protects joints from the wear and tear of movement. Without
+                    enough cartilage, bones grind together, resulting in severe joint pain.
+                    <br> Dr. Perez has aided over 7,000 patients in alleviating their joint pain through a natural discovery he refers to as “the missing link,” a solution unfamiliar to many doctors. This discovery, not involving Turmeric, CBD, or other
+                    well-known remedies, has shown promising results in a double-blind clinical study published in the Phytomedicine Journal.<br> Today, Dr. Perez is sharing a video revealing this natural discovery that could provide joint pain relief.
+                    <br>The video is free to watch and is both brief and informative. The feedback has been overwhelmingly positive, with many reporting significant improvements in their condition.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-item-header" aria-expanded="false" aria-controls="accordion-content-1">What is Joint Pain?</div>
+                <div id="accordion-content-1" class="accordion-item-content">
+                    <p>Millions of British individuals endure pain in their knees, shoulders, lower back, hips, elbows, fingers, and other areas...</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header" aria-expanded="false" aria-controls="accordion-content-2">Dr. Perez's Discovery</div>
+                <div id="accordion-content-2" class="accordion-item-content">
+                    <p>Dr. Perez has aided over 7,000 patients in alleviating their joint pain through a natural discovery he refers to as “the missing link...”</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-item-header" aria-expanded="false" aria-controls="accordion-content-3">How It Can Help You</div>
+                <div id="accordion-content-3" class="accordion-item-content">
+                    <p>Today, Dr. Perez is sharing a video revealing this natural discovery that could provide joint pain relief...</p>
+                </div>
+            </div>
+        </div>
+        <a href="terms.html" class="btn">Learn More</a>
+        <div class="iframe-container">
+            <iframe src="https://www.youtube.com/embed/FY9tfF0xvS8?autoplay=1" allowfullscreen></iframe>
+        </div>
+    </div>
+    <footer>
+        <p>This is an advertisement and not an actual news article, blog, or consumer protection update.</p>
+        <p>The information on this website has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary / results may not be typical / reviews or testimonials
+            may be fictionalized. This information does not constitute medical advice and it should not be relied upon as such. Consult with your doctor before modifying your regular medical regime.</p>
+        <hr>
+        <div>
+            <p style="margin: 0;">Copyright © 2024 All rights reserved</p>
+            <div>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="connect.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.accordion-item-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = document.getElementById(header.getAttribute('aria-controls'));
+                const isOpen = header.getAttribute('aria-expanded') === 'true';
+
+                // Toggle the active state
+                header.setAttribute('aria-expanded', !isOpen);
+                content.classList.toggle('open', !isOpen);
+            });
+        });
+    </script>
+</body>
+
+</html>

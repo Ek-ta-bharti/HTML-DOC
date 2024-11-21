@@ -1,99 +1,334 @@
-<!-- mdn wedoc -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yoga Studio</title>
     <style>
-        ul li{
-            text-decoration: none;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
         }
-        ol li{
+        
+        header {
+            background-color: #f0f0f0;
+            color: #848484;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            text-align: center;
+            padding: 1px;
+            font-size: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .hero {
+            background: url('./Image/1') no-repeat center center/cover;
+            padding: 6rem 0;
+            text-align: center;
+            color: white;
+            background-blur: 5px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            text-align: justify;
+        }
+        
+        .hero-content h1,
+        .hero-content p {
+            text-align: justify;
+        }
+        
+        .cta-button {
+            display: center;
+            padding: 0.75rem 2rem;
+            margin-top: 1.5rem;
+            background: #e94e77;
+            color: white;
             text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #d43f5a;
+            transform: translateY(-2px);
+        }
+        
+        main {
+            padding: 0 1rem;
+            background: #f4f4f4;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #e94e77;
+        }
+        
+        .benefit,
+        .class {
+            margin-bottom: 2.5rem;
+            text-align: justify;
+        }
+        
+        .benefit h3,
+        .class h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #e94e77;
+        }
+        
+        .benefit p,
+        .class p {
+            font-size: 1.1rem;
+            margin: 0;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        .instructor-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .instructor-profile img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 4px solid #e94e77;
+        }
+        
+        .instructor-profile h3 {
+            margin: 0.5rem 0;
+            font-size: 1.6rem;
+            color: #333;
+        }
+        
+        .instructor-profile p {
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+        }
+        
+        .testimonials blockquote {
+            font-style: italic;
+            border-left: 4px solid #e94e77;
+            padding-left: 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+        
+        .image-slider {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .slider-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .image-slider img:nth-child(1) {
+            opacity: 1;
+        }
+        
+        .image-slider img:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .image-slider img:nth-child(3) {
+            opacity: 0;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 1.5rem;
+        }
+        
+        footer a {
+            color: #e94e77;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 0.5rem;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        footer hr {
+            border: 0.5px solid #555;
+            margin: 1rem 0;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
+        
+        footer .footer-links {
+            margin: 1rem 0;
         }
     </style>
 </head>
+
 <body>
-    <!-- heading tag -->
-    <h1>First heading</h1>
-    <h2>Second heading</h2>
-    <h3>Third heading</h3>
-    <h4>Fourth heading</h4>
-    <h5>Fifth heading</h5>
-    <h6>Sixth heading</h6>
+    <header>
+        <h1>ADVERTORIAL</h1>
+    </header>
+    <div>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover the Power of Yoga</h1>
+                <p>Transform Your Body and Mind with Our Expert Yoga Classes. Experience holistic wellness and unlock your inner peace with our diverse range of yoga practices. Join our community and embark on a journey towards a healthier and more balanced
+                    life.
+                </p>
+                <a href="#contact" class="cta-button">Join a Free Class Today!</a>
+            </div>
+        </section>
+    </div>
 
-    <!-- paragraph tage -->
-    <p> first para</p>
-
-     <!-- ancher tag -->
-    <a href="https://www.google.com">website</a>
-    <a href="mailto:ektabharti235@gmail.com">email</a>
-    <a href="tel:+917667006101">phone</a>
-
-    <!-- unorder list -->
-    <!-- ul>li*3 -->
-   
-    <ul>
-        <li>html</li>
-        <li>css</li>
-        <li>js</li>
-    </ul>
-
-    <!-- order list -->
-    <!-- Ol>li*3 -->
-    <ol>
-        <li>java</li>
-        <li>python</li>
-        <li>php</li>
-    </ol>
-
-      <!-- table -->
-      <!-- table>(tr>td*3)*3 -->
-      <table>
-        <tr>
-            <th>Sr. no</th>
-            <th>Name</th>
-            <th>Login</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-        </tr>
-      </table>
-
-       <!-- image -->
-       <img src="https://t4.ftcdn.net/jpg/05/37/60/33/360_F_537603384_H1ZofjzVzHxj0AMX9ZOvhk7Kiufx3Mqi.jpg" alt="ekta">
-
-      <!-- ========formating  tag============== -->
-      <!-- lorem20 -->
-     <P>Lorem <b> ipsum </b> dolor sit amet consectetur <u>  adipisicing </u> elit.<s> Ad  </s> earum saepe <strong> dolores </strong>dolores rerum laborum ab deserunt, eveniet <em> molestiae </em> corporis! <i> Obcaecati! </i>
-     </P>
-     <p>
-        2<sup>5</sup>
-     </p>
-     <P>
-        O<sub>2</sub>
-     </P>
-     <pre>
-        my name is ekta,
-        btech cse
-     </pre>
-     <pre>
-        my name is
-         ekta,
-        btech 
-        cse
-        mmdu
-     </pre>
+    <main>
+        <section id="benefits">
+            <div class="container">
+                <h2>Benefits of Yoga</h2>
+                <div class="benefit">
+                    <h3>Enhanced Flexibility</h3>
+                    <p>Experience a significant boost in your range of motion and reduce muscle stiffness through our expertly designed yoga sessions. Each class focuses on a variety of postures and stretches that gently open and lengthen your muscles, leading
+                        to improved flexibility and ease of movement. Whether you're a beginner or an experienced yogi, our tailored approach ensures that you can achieve your personal flexibility goals.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Stress Relief and Mental Clarity</h3>
+                    <p>Discover the powerful benefits of mindfulness with our stress-relief techniques and guided meditation practices. Yoga is not just a physical workout; it also helps in calming the mind and reducing anxiety. Our sessions are designed
+                        to promote deep relaxation and mental clarity, helping you to release the tensions of daily life and achieve a state of inner peace and balance.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Strength and Balance</h3>
+                    <p>Our yoga classes are crafted to enhance your core strength and improve your overall balance. Through a series of dynamic exercises and poses, you will build muscular strength, stability, and coordination. This holistic approach not
+                        only improves your physical fitness but also supports better posture and reduces the risk of injuries in daily activities. Experience a stronger, more balanced body with each session.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Enhanced Mental Focus</h3>
+                    <p>Improve your concentration and cognitive function with our yoga practices. By integrating breath control and mindful movements, yoga helps sharpen mental focus and clarity. This benefit extends beyond the mat, enhancing your ability
+                        to tackle daily challenges with a calm and centered mindset.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Better Sleep Quality</h3>
+                    <p>Achieve a more restful and rejuvenating sleep with our yoga routines designed to relax your body and mind. Regular practice can help regulate sleep patterns, reduce insomnia, and improve overall sleep quality. Wake up feeling refreshed
+                        and energized, ready to face the day with a positive outlook.</p>
+                </div>
+            </div>
+        </section>
 
 
+        <section id="classes">
+            <div class="container">
+                <h2>Our Classes</h2>
+                <div class="image-slider">
+                    <img src="https://img.freepik.com/premium-photo/man-hatha-yoga-asana-front-white-background_87557-27896.jpg" alt="Hatha Yoga" class="slider-image">
+                    <img src="https://img.freepik.com/free-photo/woman-standing-big-toe-yoga-pose_23-2148258917.jpg" alt="Big Toe Pose" class="slider-image">
+                    <img src="https://st3.depositphotos.com/10439530/13566/i/450/depositphotos_135665730-stock-photo-woman-standing-in-yoga-position.jpg" alt="Yoga Position" class="slider-image">
+                </div>
+                <div class="class">
+                    <h3>Beginner's Yoga</h3>
+                    <p>This class is perfect for newcomers to yoga. Learn the foundational poses and techniques to build a strong practice. We focus on breath control, basic postures, and alignment to ensure a safe and effective start to your yoga journey.</p>
+                </div>
+                <div class="class">
+                    <h3>Vinyasa Flow</h3>
+                    <p>Experience a dynamic and flowing practice that links breath with movement. Vinyasa Flow is designed to increase flexibility, strength, and endurance through a series of continuous, fluid movements. Suitable for those looking to deepen
+                        their practice and challenge their body.</p>
+                </div>
+                <div class="class">
+                    <h3>Restorative Yoga</h3>
+                    <p>Relax and rejuvenate with our Restorative Yoga classes. Focus on gentle stretches and relaxation techniques that help to release tension and promote deep relaxation. Ideal for those seeking a calming and restorative experience to balance
+                        out a hectic lifestyle.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="testimonials">
+            <div class="container">
+                <h2>What Our Clients Say</h2>
+                <blockquote>
+                    <p>"Joining this yoga studio has been a life-changing experience for me. The instructors are highly skilled and the classes are well-structured. I've seen tremendous improvements in my flexibility and overall well-being."</p>
+                </blockquote>
+                <blockquote>
+                    <p>"The peaceful environment and supportive community make this the perfect place for my yoga practice. I always leave feeling refreshed and rejuvenated. Highly recommend to anyone looking to enhance their health and fitness."</p>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <hr>
+        <p>&copy; 2024 Yoga Studio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider-image');
+        const totalImages = images.length;
+
+        function slideImages() {
+            images.forEach((img, index) => {
+                img.style.opacity = index === currentIndex ? '1' : '0';
+            });
+            currentIndex = (currentIndex + 1) % totalImages;
+        }
+
+        setInterval(slideImages, 3000);
+    </script>
 </body>
 
 </html>
