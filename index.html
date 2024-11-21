@@ -4,331 +4,390 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoga Studio</title>
+    <title>Papillon Puppies for Sale in the UK</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             color: #333;
+            background-color: #f5f5f5;
         }
         
-        header {
+        .advertorial-header {
             background-color: #f0f0f0;
             color: #848484;
             text-align: center;
             width: 100%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
-            text-align: center;
-            padding: 1px;
-            font-size: 5px;
+            padding: 5px;
+            font-size: 20px;
             letter-spacing: 1px;
+            margin-bottom: 10px;
         }
         
-        .hero {
-            background: url('./Image/1') no-repeat center center/cover;
-            padding: 6rem 0;
+        .main-header {
+            background-color: #ffeb3b;
             text-align: center;
-            color: white;
-            background-blur: 5px;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-            text-align: justify;
-        }
-        
-        .hero-content h1,
-        .hero-content p {
-            text-align: justify;
-        }
-        
-        .cta-button {
-            display: center;
-            padding: 0.75rem 2rem;
-            margin-top: 1.5rem;
-            background: #e94e77;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        
-        .cta-button:hover {
-            background: #d43f5a;
-            transform: translateY(-2px);
-        }
-        
-        main {
-            padding: 0 1rem;
-            background: #f4f4f4;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
         }
         
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 20px;
         }
         
-        section {
-            padding: 4rem 0;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: #e94e77;
-        }
-        
-        .benefit,
-        .class {
-            margin-bottom: 2.5rem;
-            text-align: justify;
-        }
-        
-        .benefit h3,
-        .class h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            color: #e94e77;
-        }
-        
-        .benefit p,
-        .class p {
-            font-size: 1.1rem;
-            margin: 0;
-            line-height: 1.6;
-            text-align: justify;
-        }
-        
-        .instructor-profile {
+        .image-text-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 2rem 0;
-            padding: 1rem;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
         }
         
-        .instructor-profile img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 4px solid #e94e77;
+        .image-container {
+            flex: 1 1 45%;
+            margin-right: 20px;
         }
         
-        .instructor-profile h3 {
-            margin: 0.5rem 0;
-            font-size: 1.6rem;
-            color: #333;
-        }
-        
-        .instructor-profile p {
-            font-size: 1rem;
-            color: #666;
-            text-align: center;
-        }
-        
-        .testimonials blockquote {
-            font-style: italic;
-            border-left: 4px solid #e94e77;
-            padding-left: 1.5rem;
-            margin: 1.5rem auto;
-            max-width: 800px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: justify;
-        }
-        
-        .image-slider {
-            position: relative;
+        .image-container img {
             width: 100%;
-            max-width: 600px;
-            height: 400px;
-            margin: 0 auto;
-            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
         
-        .slider-image {
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        
+        .benefit {
+            flex: 1 1 45%;
+        }
+        
+        .benefit h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .benefit p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0 0 10px;
+        }
+        
+        .benefit ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        
+        .benefit ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            background: url('check.png') no-repeat left center;
+            background-size: 16px;
+        }
+        
+        .cta {
+            text-align: center;
+            background-color: #ffeb3b;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .cta button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .cta button:hover {
+            background-color: #0056b3;
+        }
+        
+        .sale-tag {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: opacity 1s ease-in-out;
+            top: 10px;
+            left: 10px;
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
         }
         
-        .image-slider img:nth-child(1) {
-            opacity: 1;
+        .puppy-card {
+            position: relative;
+            margin-bottom: 20px;
         }
         
-        .image-slider img:nth-child(2) {
-            opacity: 0;
+        .puppy-price {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 10px;
         }
         
-        .image-slider img:nth-child(3) {
-            opacity: 0;
+        .puppy-price .original-price {
+            text-decoration: line-through;
+            color: #888;
+        }
+        
+        .puppy-price .discounted-price {
+            color: #007bff;
+        }
+        
+        .puppy-price .discount-amount {
+            font-size: 16px;
+            color: #ff0000;
         }
         
         footer {
-            background: #333;
-            color: white;
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            padding: 2rem 1.5rem;
+            padding: 20px;
+            font-size: 14px;
         }
         
         footer a {
-            color: #e94e77;
+            color: #ffeb3b;
             text-decoration: none;
-            font-weight: bold;
-            margin: 0 0.5rem;
+            margin: 0 10px;
         }
         
         footer a:hover {
             text-decoration: underline;
         }
         
-        footer hr {
-            border: 0.5px solid #555;
-            margin: 1rem 0;
+        @media (max-width: 768px) {
+            .advertorial-header {
+                font-size: 10px;
+            }
+            .main-header {
+                font-size: 20px;
+                padding: 15px;
+            }
+            .image-text-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-container {
+                margin-right: 0;
+                max-width: 100%;
+            }
+            .benefit {
+                max-width: 100%;
+            }
+            .benefit h3 {
+                font-size: 24px;
+            }
+            .benefit p {
+                font-size: 16px;
+            }
+            .benefit ul {
+                font-size: 14px;
+            }
+            .cta h2 {
+                font-size: 20px;
+            }
+            .cta button {
+                font-size: 14px;
+            }
         }
         
-        footer p {
-            margin: 0.5rem 0;
-        }
-        
-        footer .footer-links {
-            margin: 1rem 0;
+        @media (max-width: 480px) {
+            .advertorial-header {
+                font-size: 8px;
+            }
+            .main-header {
+                font-size: 18px;
+                padding: 10px;
+            }
+            .image-text-container {
+                padding: 10px;
+            }
+            .benefit h3 {
+                font-size: 20px;
+            }
+            .benefit p {
+                font-size: 14px;
+            }
+            .benefit ul {
+                font-size: 12px;
+            }
+            .cta h2 {
+                font-size: 18px;
+            }
+            .cta button {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>ADVERTORIAL</h1>
+    <header class="advertorial-header">
+        ADVERTORIAL
     </header>
-    <div>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Discover the Power of Yoga</h1>
-                <p>Transform Your Body and Mind with Our Expert Yoga Classes. Experience holistic wellness and unlock your inner peace with our diverse range of yoga practices. Join our community and embark on a journey towards a healthier and more balanced
-                    life.
+    <header class="main-header">
+        Papillon Puppies for Sale in the UK
+    </header>
+    <div class="container">
+        <div class="image-text-container">
+            <div class="image-container">
+                <div class="puppy-card">
+                    <a href="more-dogs.html"><img src="Image/1.avif" alt="Papillon Dog"></a>
+                    <div class="sale-tag">Sale</div>
+                    <div class="puppy-price">
+                        <p class="original-price">£1,500</p>
+                        <p class="discounted-price">£1,200</p>
+                        <p class="discount-amount">£300 off</p>
+                    </div>
+                </div>
+                <div class="puppy-card">
+                    <a href="more-dogs.html"><img src="Image/1.3.jpg" alt="Papillon Dog"></a>
+                    <div class="sale-tag">Sale</div>
+                    <div class="puppy-price">
+                        <p class="original-price">£1,600</p>
+                        <p class="discounted-price">£1,300</p>
+                        <p class="discount-amount">£300 off</p>
+                    </div>
+                </div>
+                <div class="puppy-card">
+                    <a href="more-dogs.html"><img src="Image/1.4.png" alt="Papillon Dog"></a>
+                    <div class="sale-tag">Sale</div>
+                    <div class="puppy-price">
+                        <p class="original-price">£1,550</p>
+                        <p class="discounted-price">£1,250</p>
+                        <p class="discount-amount">£300 off</p>
+                    </div>
+                </div>
+                <div class="puppy-card">
+                    <a href="more-dogs.html"><img src="Image/1.5.jpg" alt="Papillon Dog"></a>
+                    <div class="sale-tag">Sale</div>
+                    <div class="puppy-price">
+                        <p class="original-price">£1,700</p>
+                        <p class="discounted-price">£1,400</p>
+                        <p class="discount-amount">£300 off</p>
+                    </div>
+                </div>
+            </div>
+            <div class="benefit">
+                <h3>About Papillon Dogs</h3>
+                <p>
+                    The Papillon dog is a delightful breed known for its affectionate nature, intelligence, and distinctive butterfly-like ears. Originating from Europe, the Papillon is a small yet robust breed that has been a cherished companion for centuries. They are
+                    renowned for their elegant appearance and lively personality, making them an excellent choice for families and individuals alike.
                 </p>
-                <a href="#contact" class="cta-button">Join a Free Class Today!</a>
+                <p>
+                    Papillons are exceptionally friendly and sociable, often forming strong bonds with their human families. They are known for their playful and energetic demeanor, which makes them a joy to have around. Whether you are looking for a companion for your children
+                    or a furry friend to keep you company, the Papillon is sure to fit the bill.
+                </p>
+                <p>
+                    Despite their small size, Papillons are surprisingly agile and active. They enjoy playtime and exercise, which helps keep them healthy and happy. Their intelligence makes them highly trainable, and they often excel in obedience training and agility courses.
+                    This breed is also known for being alert and curious, which makes them excellent watchdogs despite their size.
+                </p>
+                <h2>How to Care for Your Papillon</h2>
+                <p>
+                    Caring for a Papillon involves regular grooming, exercise, and attention to their dietary needs. Their long, flowing coat requires regular brushing to prevent tangles and mats. Bathing should be done as needed, and regular nail trimming is essential to
+                    keep their nails from becoming overgrown.
+                </p>
+                <p>
+                    Exercise is important for Papillons to keep them healthy and happy. They enjoy short walks, playtime in the yard, and interactive games with their family. Mental stimulation is also crucial, as Papillons are intelligent and thrive on challenges. Puzzle
+                    toys and interactive games can help keep their minds sharp.
+                </p>
+                <p>
+                    A balanced diet is essential for maintaining your Papillon's health. High-quality dog food that meets their nutritional needs will help keep them in good condition. Always ensure they have access to fresh water and monitor their weight to prevent obesity.
+                </p>
+                <h3>Key Benefits of Owning a Papillon</h3>
+
+                <p>Friendly and Social: Papillons are known for their outgoing and friendly nature, making them great companions for people of all ages.</p>
+                <p>Easy to Train: Due to their high intelligence and eagerness to please, Papillons are relatively easy to train and can learn commands quickly.</p>
+                <p>Great with Kids: Their playful and gentle temperament makes Papillons wonderful pets for families with children.</p>
+                <p>Low Maintenance: Papillons have a relatively low maintenance coat compared to other breeds. Regular brushing is usually sufficient to keep their coat healthy and tangle-free.</p>
+
+                <h3>Health and Care</h3>
+                <p>
+                    Like all dog breeds, Papillons require regular veterinary care to ensure their health and well-being. Regular check-ups, vaccinations, and preventative treatments for parasites are essential. Their dental health is also important, and regular brushing
+                    of their teeth can help prevent dental issues.
+                </p>
+                <p>
+                    Papillons are generally healthy dogs, but like any breed, they can be prone to certain health conditions. Responsible breeders will conduct health screenings to ensure the puppies are free from genetic disorders. It's essential to choose a reputable breeder
+                    who prioritizes the health and well-being of their dogs.
+                </p>
+                <h3>Training and Socialization</h3>
+                <p>
+                    Early socialization and training are crucial for Papillons. Exposure to various environments, people, and other animals helps them develop into well-adjusted adults. Positive reinforcement methods work best with this breed, as they respond well to praise
+                    and rewards. Consistent training and socialization contribute to a well-behaved and confident adult dog.
+                </p>
+                <p>
+                    Papillons thrive on interaction with their families and enjoy participating in activities with their owners. Engaging them in play, training sessions, and outings can help keep them mentally and physically stimulated. They are known for their enthusiasm
+                    and energy, which can make training sessions both fun and rewarding.
+                </p>
+                <h2>Adopting a Papillon</h2>
+                <p>
+                    Adopting a Papillon is a rewarding experience. When you choose to adopt, you are giving a dog a loving home and a chance for a new beginning. Reputable breeders and rescue organizations are excellent sources for finding a Papillon that fits your lifestyle
+                    and preferences.
+                </p>
+                <p>
+                    Before adopting, consider your lifestyle and the time you can dedicate to caring for a dog. Papillons thrive in environments where they receive plenty of attention and interaction. Ensure you have the resources to provide for their needs and commit to
+                    their care for their entire life.
+                </p>
+                <p>
+                    If you are considering adopting a Papillon, reach out to local rescue organizations or breeders to learn more about available dogs. Many organizations have Papillons in need of loving homes, and they can provide valuable information about the breed and
+                    adoption process.
+                </p>
             </div>
-        </section>
-    </div>
-
-    <main>
-        <section id="benefits">
-            <div class="container">
-                <h2>Benefits of Yoga</h2>
-                <div class="benefit">
-                    <h3>Enhanced Flexibility</h3>
-                    <p>Experience a significant boost in your range of motion and reduce muscle stiffness through our expertly designed yoga sessions. Each class focuses on a variety of postures and stretches that gently open and lengthen your muscles, leading
-                        to improved flexibility and ease of movement. Whether you're a beginner or an experienced yogi, our tailored approach ensures that you can achieve your personal flexibility goals.</p>
-                </div>
-                <div class="benefit">
-                    <h3>Stress Relief and Mental Clarity</h3>
-                    <p>Discover the powerful benefits of mindfulness with our stress-relief techniques and guided meditation practices. Yoga is not just a physical workout; it also helps in calming the mind and reducing anxiety. Our sessions are designed
-                        to promote deep relaxation and mental clarity, helping you to release the tensions of daily life and achieve a state of inner peace and balance.</p>
-                </div>
-                <div class="benefit">
-                    <h3>Strength and Balance</h3>
-                    <p>Our yoga classes are crafted to enhance your core strength and improve your overall balance. Through a series of dynamic exercises and poses, you will build muscular strength, stability, and coordination. This holistic approach not
-                        only improves your physical fitness but also supports better posture and reduces the risk of injuries in daily activities. Experience a stronger, more balanced body with each session.</p>
-                </div>
-                <div class="benefit">
-                    <h3>Enhanced Mental Focus</h3>
-                    <p>Improve your concentration and cognitive function with our yoga practices. By integrating breath control and mindful movements, yoga helps sharpen mental focus and clarity. This benefit extends beyond the mat, enhancing your ability
-                        to tackle daily challenges with a calm and centered mindset.</p>
-                </div>
-                <div class="benefit">
-                    <h3>Better Sleep Quality</h3>
-                    <p>Achieve a more restful and rejuvenating sleep with our yoga routines designed to relax your body and mind. Regular practice can help regulate sleep patterns, reduce insomnia, and improve overall sleep quality. Wake up feeling refreshed
-                        and energized, ready to face the day with a positive outlook.</p>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="classes">
-            <div class="container">
-                <h2>Our Classes</h2>
-                <div class="image-slider">
-                    <img src="https://img.freepik.com/premium-photo/man-hatha-yoga-asana-front-white-background_87557-27896.jpg" alt="Hatha Yoga" class="slider-image">
-                    <img src="https://img.freepik.com/free-photo/woman-standing-big-toe-yoga-pose_23-2148258917.jpg" alt="Big Toe Pose" class="slider-image">
-                    <img src="https://st3.depositphotos.com/10439530/13566/i/450/depositphotos_135665730-stock-photo-woman-standing-in-yoga-position.jpg" alt="Yoga Position" class="slider-image">
-                </div>
-                <div class="class">
-                    <h3>Beginner's Yoga</h3>
-                    <p>This class is perfect for newcomers to yoga. Learn the foundational poses and techniques to build a strong practice. We focus on breath control, basic postures, and alignment to ensure a safe and effective start to your yoga journey.</p>
-                </div>
-                <div class="class">
-                    <h3>Vinyasa Flow</h3>
-                    <p>Experience a dynamic and flowing practice that links breath with movement. Vinyasa Flow is designed to increase flexibility, strength, and endurance through a series of continuous, fluid movements. Suitable for those looking to deepen
-                        their practice and challenge their body.</p>
-                </div>
-                <div class="class">
-                    <h3>Restorative Yoga</h3>
-                    <p>Relax and rejuvenate with our Restorative Yoga classes. Focus on gentle stretches and relaxation techniques that help to release tension and promote deep relaxation. Ideal for those seeking a calming and restorative experience to balance
-                        out a hectic lifestyle.</p>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="testimonials">
-            <div class="container">
-                <h2>What Our Clients Say</h2>
-                <blockquote>
-                    <p>"Joining this yoga studio has been a life-changing experience for me. The instructors are highly skilled and the classes are well-structured. I've seen tremendous improvements in my flexibility and overall well-being."</p>
-                </blockquote>
-                <blockquote>
-                    <p>"The peaceful environment and supportive community make this the perfect place for my yoga practice. I always leave feeling refreshed and rejuvenated. Highly recommend to anyone looking to enhance their health and fitness."</p>
-                </blockquote>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-links">
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms of Service</a>
-            <a href="#contact">Contact Us</a>
         </div>
+        <div class="cta">
+            <h2>Get Your Papillon Puppy Today!</h2>
+            <button onclick="window.location.href='view-puppies.html'">Click Here to View Puppies</button>
+        </div>
+
+    </div>
+    <footer>
+        <p>This website provides information about Papillon puppies for sale and related pet care. The content provided here is for informational purposes only and does not constitute veterinary advice. Consult with a veterinarian for any concerns regarding
+            your Papillon puppy's health and well-being.</p>
+        <p>The information on this website has not been evaluated by any veterinary organization. This site is not intended to diagnose, treat, cure, or prevent any disease in Papillon puppies. Results and experiences may vary. Reviews or testimonials on
+            this website are provided by customers and may not be representative of all experiences. Always consult with a veterinarian before making decisions about your Papillon puppy's care.</p>
         <hr>
-        <p>&copy; 2024 Yoga Studio. All rights reserved.</p>
+
+        <div>
+            <p style="margin: 0;">Copyright © 2024 Papillon Puppies for Sale. All rights reserved.</p>
+            <div>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="connect.html">Contact Us</a>
+            </div>
+        </div>
     </footer>
-
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.slider-image');
-        const totalImages = images.length;
-
-        function slideImages() {
-            images.forEach((img, index) => {
-                img.style.opacity = index === currentIndex ? '1' : '0';
-            });
-            currentIndex = (currentIndex + 1) % totalImages;
-        }
-
-        setInterval(slideImages, 3000);
-    </script>
 </body>
 
 </html>

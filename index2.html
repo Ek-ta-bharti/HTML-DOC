@@ -1,311 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joint Helper</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="..favicon (1).ico">
+    <meta charset="utf-8">
+    <title>PetHunt</title>
+    <!-- bootstrap CDN Stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google Fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome kit -->
+    <script src="https://kit.fontawesome.com/123926b258.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap Javascript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <style>
         body {
-            margin: 0;
-            font-family: 'Roboto', Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
+            background-color: #C9C994;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        #title {
+            background-color: #676734;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        .container-fluid {
+            /* padding: 2% 12%;*/
+        }
+        
+        h1 {
+            font-family: 'montserrat', sans-serif;
+            font-weight: 1000;
+            font-size: 3rem;
+            line-height: 1.4;
+        }
+        
+        .home-thing {
+            margin-top: 30%;
+        }
+        
+        .title-image {
+            margin-top: 30%;
+            margin-left: 5%;
             width: 100%;
-            box-sizing: border-box;
+            transform: rotate(7deg);
         }
         
-        header {
-            background-color: #f0f0f0;
-            color: #848484;
-            text-align: center;
-            width: 100%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-            text-align: center;
-            padding: 1px;
-            font-size: 5px;
-            letter-spacing: 1px;
+        .download-button {
+            margin: 7% 0% 0% 3%;
         }
         
-        .first {
-            background-color: #f4f4f4;
-            padding: 25px 20px;
-            text-align: center;
-            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            color: #333;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        .second {
-            background-color: #121487;
-            color: #ffffff;
-            position: relative;
-            overflow: hidden;
-            padding: 20px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        .second .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-        
-        .second .text {
-            flex: 1;
-            text-align: left;
-            margin-right: 40px;
-            max-width: 50%;
-        }
-        
-        .second .text p {
-            font-size: 1.5em;
-            color: #ffffff;
-            margin: 15px 0;
-            padding: 15px;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-            white-space: nowrap;
-            animation: fadeInUp 0.5s ease forwards;
-        }
-        
-        .marquee {
-            white-space: nowrap;
-            overflow: hidden;
-            box-sizing: border-box;
-            position: relative;
-        }
-        
-        .marquee span {
-            display: inline-block;
-            padding-left: 100%;
-            animation: scroll-left 10s linear infinite;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes scroll-left {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-        
-        .second img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            flex: 1;
-        }
-        
-        .info {
-            background-color: #f4f4f4;
-            padding: 20px;
-            color: #333;
-            text-align: justify;
-            font-size: 1em;
-            margin: 40px auto;
-            border-radius: 12px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-            max-width: 90%;
-            line-height: 1.8;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        .cta {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            margin: 20px auto;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 560px;
-            /* Maximum width of the video */
-            height: 0;
-            padding-top: 56.25%;
-            /* 16:9 Aspect Ratio */
-            margin-bottom: 20px;
-        }
-        
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 8px;
-        }
-        
-        .cta h2 {
-            margin-bottom: 10px;
-            font-size: 1.5em;
-            color: #121487;
-            text-align: center;
-        }
-        
-        .cta a {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1em;
-            color: #fff;
-            background-color: #121487;
-            border-radius: 8px;
-            text-decoration: none;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .cta a:hover {
-            background-color: #0a0a7e;
-        }
-        
-        footer {
-            background-color: #f4f4f4;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #ddd;
-            color: #8f8383;
-            font-size: 0.9em;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        footer p {
-            margin: 10px 0;
-        }
-        
-        footer a {
-            color: #121487;
-            text-decoration: none;
-            margin: 0 10px;
+        .navbar-brand {
+            margin-right: 190px;
+            font-family: 'Ubuntu';
+            font-size: 2rem;
             font-weight: bold;
         }
         
-        footer a:hover {
-            text-decoration: underline;
+        .navbar {
+            z-index: 1;
+            background-color: #006432;
+            position: fixed;
         }
         
-        footer hr {
-            margin: 20px 0;
-            border: 0;
-            border-top: 1px solid #ddd;
+        .nav-item {
+            padding: 0 15px;
+        }
+        
+        .nav-link {
+            font-weight: lighter;
+        }
+        
+        #features {
+            padding: 7% 15%;
+        }
+        
+        .features-box {
+            text-align: center;
+            padding-top: 2%;
+            transition: background-color 3s;
+            transition: color 3s;
+        }
+        
+        .features-box:hover {
+            background-color: #ADAD5A;
+            color: #FFF;
+        }
+        
+        h3 {
+            font-family: "Montserrat-Bold";
+        }
+        
+        .icon {
+            color: #676734;
+            margin-bottom: 1rem;
+            transition: color 1s;
+        }
+        
+        .icon:hover {
+            color: #fff;
+        }
+        
+        #testimonials {
+            text-align: center;
+            background-color: #676734;
+            transition: background-color 3s;
+        }
+        
+        #testimonials:hover {
+            background-color: #ADAD5A;
+        }
+        
+        DEDEBC .img-1 {
+            border-radius: 100%;
+        }
+        
+        #testimonials h1 {
+            font-family: "Montserrat-Bold";
+            font-weight: bold;
+            font-size: 3rem;
+        }
+        
+        .carousel-item {
+            padding: 7% 15%;
+        }
+        
+        #pricing {
+            padding: 3% 10%;
+        }
+        
+        .price-item {
+            margin-bottom: 4%;
+        }
+        
+        .card-header {
+            background-color: #676734;
+        }
+        
+        .card {
+            background-color: #ADAD5A;
+            transition: background-color 3s;
+        }
+        
+        .card:hover {
+            background-color: #C9C994;
+        }
+        
+        #cta {
+            text-align: center;
+            padding: 5% 15%;
+            background-color: #676734;
+        }
+        
+        #cta-text {
+            padding-bottom: 2%;
+            color: #fff;
+            font-family: 'Ubuntu';
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .footer-button {
+            margin: 2% 1%;
+        }
+        
+        #footer {
+            font-family: 'Ubuntu';
+            font-size: 3rem;
+            color: #fff;
+            padding-top: 2%;
+            padding-bottom: 1%;
+            text-align: center;
+        }
+        
+        #footer-text {
+            font-family: 'Ubuntu';
+            color: #000;
+            padding-top: 2%;
+            padding-bottom: 1%;
+            text-align: center;
+        }
+        
+        .contact-text {
+            color: #fff;
         }
     </style>
-
 </head>
 
 <body>
-    <header>
-        <h1>ADVERTORIAL</h1>
-    </header>
-    <div class="first">
-        <h1>Welcome to Joint Helper</h1>
-        <p>Your ultimate solution for joint pain relief</p>
-    </div>
-    <div class="second">
-        <div class="content">
-            <div class="text">
-                <p id="welcome-text">Welcome to Joint Helper</p>
-                <div class="marquee">
-                    <span id="solution-text">Your ultimate solution for joint pain relief</span>
+
+    <section id="title">
+
+        <div class="container-fluid">
+
+
+
+            <!-- Nav Bar -->
+
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <a class="navbar-brand" href=""><img src=".pet hunt logo.png" width="80" height="50" alt="logo"> PetHunt</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">
+                       home
+                    </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">
+                       testimonials
+                    </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">
+                        Pricing
+                    </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cta">
+                        Download
+                    </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">
+                        Contact
+                    </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+            <!-- Title -->
+
+            <section id="home">
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="home-thing">Meet new and interesting pets.</h1>
+                        <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+                        <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <img class="title-image" src="iphone7.png" alt="iphone-mockup">
+                    </div>
+                </div>
+
+        </div>
+
+        </section>
+        <!-- Features -->
+
+        <section id="features">
+
+
+            <div class="row">
+                <div class="features-box col-lg-4">
+                    <i class="fas fa-check-circle fa-4x icon"></i>
+                    <h3>Easy to find.</h3>
+                    <p>all you have to do is look and pick, your mind will be blown at the first look.</p>
+                </div>
+                <div class="features-box col-lg-4">
+                    <i class="fas fa-bullseye fa-4x icon"></i>
+                    <h3>pick yours.</h3>
+                    <p>We have all different kinds of animals, the greatest pets you dream of.so contact pethunt and get on a pethunt</p>
+                </div>
+                <div class="features-box col-lg-4">
+                    <i class="fas fa-heart fa-4x icon"></i>
+                    <h3>feedback.</h3>
+                    <p>if you like to know somthing about us. then contact us will be opon fot question you be opon for answer.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Testimonials -->
+
+        <section id="testimonials">
+
+
+
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <em>david mich</em>
+                        <h2>I no longer have to be searching on google's pet website now I can simply type in PetHunt and it is all done.</h2>
+
+                        <img class="img-1" src="dog-img 1.jpeg" height="100" width="100" alt="dog-profile">
+
+
+                    </div>
+
+                    <div class="carousel-item">
+                        <em>lily harbon</em>
+                        <h2 class="testimonial-text">my hamster was well when I bought it was well fed and well behaved and after I bought. I got a good pet for a good price. there no were beter then PetHunt. </h2>
+
+                        <img class="img-1" src="lady-img.jpg" width="100" height="100" alt="lady-profile">
+
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+
+
+        </section>
+
+
+
+
+        <!-- Pricing -->
+
+        <section id="pricing">
+
+            <div class="row text-center">
+
+                <div class="col-lg-4 col-md-6 price-item">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="">Free</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">£7 <small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>10 users included</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-outline-warning">Sign up for free</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 price-item">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="">Pro</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">£15 <small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>20 users included</li>
+                                <li>10 GB of storage</li>
+                                <li>Priority email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-warning">Get started</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 price-item">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="">Enterprise</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">£30 <small class="text-muted">/ mo</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>30 users included</li>
+                                <li>15 GB of storage</li>
+                                <li>Phone and email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-warning">Contact us</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <img src="https://www.precisionpaincarerehab.com/editor-uploads/website-1004/b370-1589826719.jpg" alt="Relief for Joint Pain">
-        </div>
-    </div>
-    <div class="info">
-        <p>
-            Millions of people across the UK struggle with debilitating pain in various parts of their bodies—knees, shoulders, lower back, hips, elbows, fingers, and more. This chronic discomfort can significantly affect daily activities and overall quality of life.
-            <br><br> Dr. Raphael Perez, a leading authority in joint health, has pinpointed a hidden factor that could be behind this widespread issue: what he refers to as "Cartilage Deterioration Syndrome." Cartilage is a crucial connective tissue that
-            cushions the joints, preventing the bones from grinding against each other and causing pain. It functions as a shock absorber, safeguarding your joints from the stresses and strains of movement. <br><br> When cartilage deteriorates or is insufficient,
-            the bones can come into direct contact, leading to severe, persistent joint pain that disrupts daily life. This condition is not always immediately apparent but can result in significant discomfort and functional impairment over time. <br><br>            Dr. Perez has successfully helped over 7,000 patients find relief from their joint pain using an innovative natural remedy he describes as "the missing link." This approach is distinct from more commonly known treatments such as Turmeric or
-            CBD, which many people are familiar with but might not provide the relief they seek. <br><br> What sets Dr. Perez's discovery apart is its unique mechanism and effectiveness, as demonstrated by a rigorous double-blind clinical study published
-            in the reputable Phytomedicine Journal. This study highlighted the significant potential of the remedy in reducing pain and improving joint health. <br><br> Today, Dr. Perez is excited to share a comprehensive video that delves into this groundbreaking
-            natural solution. The video provides valuable insights and detailed explanations on how this remedy could offer much-needed relief from joint pain. Best of all, accessing this informative video is completely free of charge. <br><br> The feedback
-            from those who have viewed the video has been overwhelmingly positive. Many people have reported substantial improvements in their symptoms, feeling better than they have in years, and appreciating the effectiveness of this natural approach.
-            <br><br> If you're struggling with joint pain or simply seeking more information on how to alleviate it, this video could be a game-changer. Don’t miss the opportunity to learn about this potentially transformative solution and discover how
-            it might help you regain your comfort and mobility. <br><br>
-        </p>
-        <div class="cta">
-            <h2>Click to Watch</h2>
-            <a href="https://youtu.be/kN6D-yw0NhA" target="_blank">Watch Now</a>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/RAZiCoDvm-4?si=o9P4VBmSYvovjAyT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p>
-                In a remarkably short period, this video has garnered thousands of views and has quickly become a viral sensation. One viewer commented, “I sure wish even one of the doctors and specialists I’ve seen over the past 22 years had known about this. It is
-                truly eye-opening and, most importantly, it might actually work!” <br><br> Dr. Perez's groundbreaking announcement has naturally sparked a range of reactions. While many have embraced the potential of his discovery, there
-                has been some skepticism. We reached out to several medical professionals who attended the initial presentation, and they offered a balanced perspective. They advised viewers to manage their expectations and approach the new information
-                with an open mind. <br><br> A nutrition expert commented, “The concept makes a lot of sense, and the science behind it appears to be solid. However, it's important to try it for yourself. While it has proven beneficial for many, it’s rare
-                to find a solution that works universally for everyone.” <br><br> The cautious optimism expressed by experts underscores the importance of personal experience and further investigation. As with any new treatment or remedy, it is advisable
-                to assess its effects on an individual basis, keeping an open mind while also considering professional advice. <br><br>
-            </p>
+        </section>
 
-        </div>
-    </div>
+        <!-- Call to Action -->
 
-    <script>
-        function wrapLetters(textId) {
-            const textElement = document.getElementById(textId);
-            const text = textElement.textContent;
-            const letters = text.split('');
-            textElement.innerHTML = '';
+        <!-- Press -->
 
-            letters.forEach((letter, index) => {
-                if (letter === ' ') {
-                    textElement.innerHTML += '&nbsp;';
-                } else {
-                    textElement.innerHTML += `<span style="animation-delay: ${index * 0.05}s;">${letter}</span>`;
-                }
-            });
-        }
+        <section id="cta">
 
-        wrapLetters('welcome-text');
-    </script>
-    <footer>
-        <p>This is an advertisement and not an actual news article, blog, or consumer protection update.</p>
-        <p>The information on this website has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary / results may not be typical / reviews or testimonials
-            may be fictionalized. This information does not constitute medical advice and it should not be relied upon as such. Consult with your doctor before modifying your regular medical regime.</p>
-        <hr>
-        <div>
-            <p style="margin: 0;">Copyright © 2024 All rights reserved</p>
-            <div>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Use</a>
-                <a href="connect.html">Contact Us</a>
-            </div>
-        </div>
-    </footer>
+            <h3 id="footer">Find the one lovely pet for yourself Today.</h3>
+            <button type="button" class="btn btn-dark btn-lg footer-button"><i class="fab fa-apple"></i> Download</button>
+            <button type="button" class="btn btn-light btn-lg footer-button"><i class="fab fa-google-play"></i> Download</button>
 
+            <h4 class="contact-text">contact me if you have found a lovely pet you will like to take home.</h4>
+
+            <button type="button" class="btn btn-outline-dark btn-lg footer-button"><i class="fab fa-computer-speaker"></i> contact</button>
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer id="footer-text">
+
+            <h5>© Copyright 2020 PetHunt. 'abdur rahman manning'</h5>
+
+        </footer>
 
 </body>
+
+
+<script type="text/javascript">
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
 
 </html>
